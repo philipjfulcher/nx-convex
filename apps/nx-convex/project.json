@@ -1,0 +1,9 @@
+{
+  "name": "nx-convex",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nx-convex/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project nx-convex --web",
+  "targets": {}
+}
