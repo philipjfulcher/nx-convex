@@ -9,7 +9,7 @@ export default defineConfig({
   cacheDir: '../../node_modules/.vite/apps/nx-convex',
 
   server: {
-    port: 4200,
+    port: 5173,
     host: 'localhost',
   },
 
