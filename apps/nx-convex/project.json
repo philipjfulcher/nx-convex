@@ -5,5 +5,16 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project nx-convex --web",
-  "targets": {}
+  "targets": {
+    "serve-with-backend": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx dev convex",
+          "nx serve nx-convex"
+        ],
+        "parallel": true
+      }
+    }
+  }
 }

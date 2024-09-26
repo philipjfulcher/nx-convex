@@ -4,7 +4,7 @@ import { nxE2EPreset } from '@nx/playwright/preset';
 import { workspaceRoot } from '@nx/devkit';
 
 // For CI, you may want to set BASE_URL to the deployed application.
-const baseURL = process.env['BASE_URL'] || 'http://localhost:4300';
+const baseURL = process.env['BASE_URL'] || 'http://localhost:5174';
 
 /**
  * Read environment variables from file.
@@ -24,12 +24,21 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   /* Run your local dev server before starting the tests */
-  webServer: {
-    command: 'npx nx run nx-convex:preview',
-    url: 'http://localhost:4300',
-    reuseExistingServer: !process.env.CI,
-    cwd: workspaceRoot,
-  },
+  webServer: [
+    {
+      command: 'npx nx run nx-convex:preview',
+      url: 'http://localhost:5174',
+      timeout: 120 * 1000,
+      reuseExistingServer: !process.env.CI,
+      cwd: workspaceRoot,
+    },
+    {
+      command: 'npx nx run convex:dev',
+      timeout: 120 * 1000,
+      reuseExistingServer: !process.env.CI,
+      cwd: workspaceRoot,
+    },
+  ],
   projects: [
     {
       name: 'chromium',
