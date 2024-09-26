@@ -1,8 +1,8 @@
-import { SignInMethodDivider } from "@/components/SignInMethodDivider";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Toaster } from "@/components/ui/toaster";
-import { useToast } from "@/components/ui/use-toast";
+import { SignInMethodDivider } from './components/SignInMethodDivider';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Toaster } from './components/ui/toaster';
+import { useToast } from './components/ui/use-toast';
 import { useAuthActions } from "@convex-dev/auth/react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { useState } from "react";

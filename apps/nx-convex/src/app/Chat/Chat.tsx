@@ -1,24 +1,24 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useMutation, useQuery } from "convex/react";
-import { FormEvent, useState } from "react";
-import { api } from "@nx-convex/convex";
-import { MessageList } from "@/Chat/MessageList";
-import { Message } from "@/Chat/Message";
-import { Id } from "@nx-convex/convex";
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { useMutation, useQuery } from 'convex/react';
+import { FormEvent, useState } from 'react';
+import { api } from '@nx-convex/convex';
+import { MessageList } from './MessageList';
+import { Message } from './Message';
+import { Id } from '@nx-convex/convex';
 
-export function Chat({ viewer }: { viewer: Id<"users"> }) {
-  const [newMessageText, setNewMessageText] = useState("");
+export function Chat({ viewer }: { viewer: Id<'users'> }) {
+  const [newMessageText, setNewMessageText] = useState('');
   const messages = useQuery(api.messages.list);
   const sendMessage = useMutation(api.messages.send);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setNewMessageText("");
+    setNewMessageText('');
     sendMessage({ body: newMessageText }).catch((error) => {
-      console.error("Failed to send message:", error);
+      console.error('Failed to send message:', error);
     });
   };
 
@@ -32,7 +32,6 @@ export function Chat({ viewer }: { viewer: Id<"users"> }) {
             authorName={message.author}
             viewer={viewer}
             messageId={message._id}
-            likes={message.likes}
           >
             {message.body}
           </Message>
@@ -45,7 +44,7 @@ export function Chat({ viewer }: { viewer: Id<"users"> }) {
             onChange={(event) => setNewMessageText(event.target.value)}
             placeholder="Write a message…"
           />
-          <Button type="submit" disabled={newMessageText === ""}>
+          <Button type="submit" disabled={newMessageText === ''}>
             Send
           </Button>
         </form>

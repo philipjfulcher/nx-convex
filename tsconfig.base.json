@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-convex/convex": ["convex/src/index.ts"],
-      "@/*": ["apps/nx-convex/src/app/*"]
+      "@/*": ["apps/nx-convex/src/app/*"],
+      "@nx-convex/convex": ["convex/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

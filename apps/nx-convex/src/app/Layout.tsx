@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { GetStartedDialog } from "@/GetStarted/GetStartedDialog";
+import { GetStartedDialog } from './GetStarted/GetStartedDialog';
 
 export function Layout({
   menu,
@@ -25,7 +25,7 @@ export function Layout({
               <a
                 href="https://docs.convex.dev"
                 className="text-muted-foreground transition-colors hover:text-foreground"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 Docs
               </a>
@@ -54,7 +54,7 @@ function FooterLink({ href, children }: { href: string; children: ReactNode }) {
     <a
       href={href}
       className="underline underline-offset-4 hover:no-underline"
-      target="_blank"
+      target="_blank" rel="noreferrer"
     >
       {children}
     </a>

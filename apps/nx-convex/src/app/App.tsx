@@ -1,8 +1,8 @@
-import { Chat } from "@/Chat/Chat";
-import { ChatIntro } from "@/Chat/ChatIntro";
-import { Layout } from "@/Layout";
-import { SignInForm } from "@/SignInForm";
-import { UserMenu } from "@/components/UserMenu";
+import { Chat } from './Chat/Chat';
+import { ChatIntro } from './Chat/ChatIntro';
+import { Layout } from './Layout';
+import { SignInForm } from './SignInForm';
+import { UserMenu } from './components/UserMenu';
 import { Authenticated, Unauthenticated, useQuery } from "convex/react";
 import { api } from "@nx-convex/convex";
 

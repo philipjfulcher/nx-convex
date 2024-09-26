@@ -1,16 +1,8 @@
-import { ConvexLogo } from "@/GetStarted/ConvexLogo";
-import { Code } from "@/components/Code";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { ConvexLogo } from './ConvexLogo';
+import { Code } from '../components/Code';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
 import {
   CodeIcon,
   ExternalLinkIcon,
@@ -68,7 +60,7 @@ function GetStartedContent() {
             <a
               href="https://dashboard.convex.dev/"
               className="underline underline-offset-4 hover:no-underline"
-              target="_blank"
+              target="_blank" rel="noreferrer"
             >
               Convex dashboard
             </a>{" "}
@@ -138,7 +130,7 @@ function Resource({
       variant="secondary"
       className="flex h-auto flex-col items-start justify-start gap-2 whitespace-normal p-4 font-normal"
     >
-      <a href={href} target="_blank">
+      <a href={href} target="_blank" rel="noreferrer">
         <div className="text-sm font-bold flex items-center gap-1">
           {title}
           <ExternalLinkIcon />

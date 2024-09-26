@@ -1,7 +1,11 @@
 {
   "name": "@nx-convex/convex",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "convex": "^1.16.0",
+    "@auth/core": "^0.34.1",
+    "@convex-dev/auth": "^0.0.61"
+  },
   "main": "./index.js",
   "module": "./index.mjs",
   "typings": "./index.d.ts",
