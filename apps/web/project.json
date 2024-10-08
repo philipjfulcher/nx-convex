@@ -8,7 +8,7 @@
     "serve-with-backend": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["nx dev convex", "nx serve nx-convex"],
+        "commands": ["nx dev convex", "nx serve web"],
         "parallel": true
       }
     }
