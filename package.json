@@ -3,14 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx serve-with-backend nx-convex",
-    "dev:frontend": "nx serve nx-convex",
+    "dev": "nx serve-with-backend web",
+    "dev:frontend": "nx serve web",
     "dev:backend": "nx dev convex",
     "predev": "convex dev --until-success && node setup.mjs --once && convex dashboard",
-    "build": "tsc -b && nx build nx-convex",
-    "lint": "tsc && nx lint nx-convex",
+    "lint": "nx run-many -t lint",
     "preview": "nx preview nx-convex",
-    "e2e": "nx e2e nx-convex-e2e"
+    "e2e": "nx e2e web-e2e"
   },
   "private": true,
   "dependencies": {
