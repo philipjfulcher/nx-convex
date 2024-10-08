@@ -4,10 +4,10 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { useMutation, useQuery } from 'convex/react';
 import { FormEvent, useState } from 'react';
-import { api } from '@nx-convex/convex';
+import { api } from '@nx-template/convex';
 import { MessageList } from './MessageList';
 import { Message } from './Message';
-import { Id } from '@nx-convex/convex';
+import { Id } from '@nx-template/convex';
 
 export function Chat({ viewer }: { viewer: Id<'users'> }) {
   const [newMessageText, setNewMessageText] = useState('');

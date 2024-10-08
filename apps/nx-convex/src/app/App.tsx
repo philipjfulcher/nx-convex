@@ -4,7 +4,7 @@ import { Layout } from './Layout';
 import { SignInForm } from './SignInForm';
 import { UserMenu } from './components/UserMenu';
 import { Authenticated, Unauthenticated, useQuery } from "convex/react";
-import { api } from "@nx-convex/convex";
+import { api } from "@nx-template/convex";
 
 export default function App() {
   const user = useQuery(api.users.viewer);

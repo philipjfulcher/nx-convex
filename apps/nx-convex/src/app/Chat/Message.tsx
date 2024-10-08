@@ -1,5 +1,5 @@
 import { cn } from '../lib/utils';
-import { Id } from '@nx-convex/convex';
+import { Id } from '@nx-template/convex';
 import { ReactNode } from 'react';
 
 export function Message({
